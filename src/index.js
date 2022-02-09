@@ -36,7 +36,6 @@ links.forEach(link => link.addEventListener("mouseover", evt => {
   links.forEach(link => link.addEventListener("mouseout", evt => {
     evt.target.style.color = "";
   }))
-
   // eventListener(#7)_dblclick+.stopPropagation() 
   containers.forEach(div => div.addEventListener("dblclick", evt => {
     evt.target.style.background = 'yellow';
@@ -47,4 +46,7 @@ links.forEach(link => link.addEventListener("mouseover", evt => {
     evt.stopPropagation();
   }))
 
-// even
+// eventListener(#8)_auxclick
+containers.forEach(div => div.addEventListener("auxclick", evt => {
+  evt.target.style.background = '';
+}))
