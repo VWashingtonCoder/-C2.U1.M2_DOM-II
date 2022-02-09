@@ -5,6 +5,9 @@ import './less/index.less'
 const links= document.querySelectorAll("a.nav-link");
 const buttons = document.querySelectorAll("div.btn");
 const contentImg = document.querySelectorAll("div.img-content");
+const containers = document.querySelectorAll("div.container");
+const subTitles = document.querySelectorAll("h4");
+
 
 // eventListeners(#1)_click
 links.forEach(link => link.addEventListener("click", evt => {
@@ -34,8 +37,14 @@ links.forEach(link => link.addEventListener("mouseover", evt => {
     evt.target.style.color = "";
   }))
 
-  // event
-  document.querySelectorAll("*").forEach(elem => elem.addEventListener("dblclick", evt => {
-    console.log(`event target: ${evt.target}`);
-    evt.stopPropagation()
+  // eventListener(#7)_dblclick+.stopPropagation() 
+  containers.forEach(div => div.addEventListener("dblclick", evt => {
+    evt.target.style.background = 'yellow';
+    
   }))
+  subTitles.forEach(h4 => h4.addEventListener("dblclick", evt => {
+    evt.target.style.color = 'skyblue';
+    evt.stopPropagation();
+  }))
+
+// even
