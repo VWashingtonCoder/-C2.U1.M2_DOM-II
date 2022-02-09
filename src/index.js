@@ -16,3 +16,12 @@ buttons.forEach(btn => btn.addEventListener("mouseenter", evt => {
 buttons.forEach(btn => btn.addEventListener("mouseleave", evt => {
     evt.target.style.background = '';
 }))
+//eventListeners(#4)_scroll
+window.addEventListener('scroll', () => {
+    const scrollable = document.documentElement.scrollHeight - window.innerHeight;
+    const scrolled = window.scrollY;
+    
+    if (scrolled === scrollable){
+        alert("Ready to Sign Up Now?")
+    } 
+})
