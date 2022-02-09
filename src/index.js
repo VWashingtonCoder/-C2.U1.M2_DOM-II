@@ -9,3 +9,10 @@ const buttons = document.querySelectorAll("div.btn");
 links.forEach(link => link.addEventListener("click", evt => {
     evt.target.style.color = "blue";
   }))
+  // eventListeners(#2&3)_mouseenter&mouseleave
+buttons.forEach(btn => btn.addEventListener("mouseenter", evt => {
+    evt.target.style.background = 'pink';
+}))
+buttons.forEach(btn => btn.addEventListener("mouseleave", evt => {
+    evt.target.style.background = '';
+}))
